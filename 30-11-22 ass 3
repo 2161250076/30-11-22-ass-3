@@ -1,0 +1,25 @@
+unit=12
+customer=14
+govtsubsidy=200
+cropsubsidy=150
+cphno=input('enter customer phone number:')
+cname=input('enter customer name:')
+cadd=input('enter customer address:')
+uq=int(input('how many units have charged:'))
+cq=int(input('how much customer charges:'))
+gq=int(input('how much charge does govtsubsidy take:'))
+csq=int(input('how much cropsubsidy charges:'))
+bill=(uq*unit)+(cq*customer)+(gq*govtsubsidy)+(csq*cropsubsidy)
+if bill>=400:
+    tax=bill*12/100
+elif bill>=200:
+    tax=bill*8/100
+elif bill>=30:
+    tax=bill*4/100
+else:
+    tax=29
+bill=bill+tax
+print('customerphone number:',cphno)
+print('customer name:',cname)
+print('customer address:',cadd)
+print('billamount:',bill)
